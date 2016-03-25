@@ -1,0 +1,8 @@
+{
+  "css/base.css": "css/base-7e23bdf83b.css",
+  "js/index.js": "js/index-73371465f4.js",
+  "js/lib/base.min.js": "js/lib/base-cc5529b4db.min.js",
+  "js/lib/jquery-2.2.2.min.js": "js/lib/jquery-2-1d35678c5e.2.2.min.js",
+  "js/lib/react-0.14.7.min.js": "js/lib/react-0-9ba549a9a6.14.7.min.js",
+  "js/lib/react-dom-0.14.7.min.js": "js/lib/react-dom-0-120c66f0f9.14.7.min.js"
+}
