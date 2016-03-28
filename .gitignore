@@ -2,3 +2,4 @@
 *.swo
 static/*
 view/*
+node_modules/*
