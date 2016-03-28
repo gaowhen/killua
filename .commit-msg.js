@@ -1,4 +1,4 @@
-i#!/usr/bin/env node
+#!/usr/bin/env node
 
 /**
  * https://github.com/kentcdodds/validate-commit-msg

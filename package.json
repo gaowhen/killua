@@ -5,13 +5,18 @@
   "private": true,
   "scripts": {
     "start": "gulp",
-    "postinstall": "gulp hook",
     "webpack:dev": "webpack -w --config webpack.dev.js",
     "webpack:release": "webpack --config webpack.pro.js",
     "serve": "gulp serve",
     "watch": "gulp watch",
     "dev": "npm run webpack:dev & gulp",
     "release": "npm run webpack:release & gulp release"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "./.pre-commit",
+      "commit-msg": "./.commit-msg.js"
+    }
   },
   "dependencies": {
     "babel": "6.5.2",
@@ -27,7 +32,7 @@
     "eslint-config-airbnb": "6.2.0",
     "eslint-plugin-react": "4.2.3",
     "express": "4.13.4",
-    "globby": "^4.0.0",
+    "globby": "4.0.0",
     "gulp": "3.9.1",
     "gulp-cached": "1.1.0",
     "gulp-cssnano": "2.1.1",
@@ -35,6 +40,7 @@
     "gulp-if": "2.0.0",
     "gulp-include": "2.1.0",
     "gulp-jade": "1.1.0",
+    "gulp-livereload": "3.8.1",
     "gulp-replace": "0.5.4",
     "gulp-rev": "7.0.0",
     "gulp-sass": "2.2.0",
@@ -49,5 +55,8 @@
     "webpack": "1.12.14",
     "webpack-dev-middleware": "1.5.1",
     "webpack-hot-middleware": "2.10.0"
+  },
+  "devDependencies": {
+    "ghooks": "^1.0.3"
   }
 }
