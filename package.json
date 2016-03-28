@@ -16,6 +16,9 @@
     "ghooks": {
       "pre-commit": "./.pre-commit",
       "commit-msg": "./.commit-msg.js"
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "dependencies": {
@@ -57,6 +60,7 @@
     "webpack-hot-middleware": "2.10.0"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "1.1.5",
     "ghooks": "^1.0.3"
   }
 }
