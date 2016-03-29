@@ -1,24 +1,28 @@
-var gulp = require('gulp')
-var replace = require('gulp-replace')
-var config = require('config').gulp
+'use strict'
+
+const gulp = require('gulp')
+const replace = require('gulp-replace')
+const config = require('config').gulp
 
 function replaceFunc(match, p1) {
-  var manifest = require(global.MANIFEST)
+  const manifest = require(global.MANIFEST)
 
   return global.DIST_DIR + manifest[p1]
 }
 
 gulp.task('css-js-replace', ['release-rev'], function () {
   return gulp.src([
-    config.build.css + '/**/*.css',
-    config.build.js + '/**/*.js'
-  ])
+    config.dist.path + '/css/**/*.css',
+    config.dist.path + '/js/**/*.js'
+  ], {
+    base: config.dist.path
+  })
   .pipe(replace(global.REGEX, replaceFunc))
-  .pipe(gulp.dest(config.build.path))
+  .pipe(gulp.dest(config.dist.path))
 })
 
 gulp.task('html-replace', ['css-js-replace'], function () {
   return gulp.src(config.src.view + '/**/*.jade')
     .pipe(replace(global.REGEX, replaceFunc))
-    .pipe(gulp.dest(config.build.view))
+    .pipe(gulp.dest(config.dist.view))
 })

@@ -1,6 +1,6 @@
-var path = require('path')
+const path = require('path')
 
-var src = {
+const src = {
   path: path.resolve(__dirname, '../src/static'),
   js: path.resolve(__dirname, '../src/static/js'),
   css: path.resolve(__dirname, '../src/static/css'),
@@ -12,8 +12,8 @@ var src = {
   pkg: path.resolve(__dirname, '../package.json'),
 }
 
-var build = {
-	asset: path.resolve(__dirname, '../static'),
+const build = {
+  asset: path.resolve(__dirname, '../static'),
   path: path.resolve(__dirname, '../static/build'),
   js: path.resolve(__dirname, '../static/build/js'),
   css: path.resolve(__dirname, '../static/build/css'),
@@ -23,7 +23,8 @@ var build = {
   webpack: path.resolve(__dirname, '../static/build/js/webpack'),
 }
 
-var dist = {
+const dist = {
+  asset: path.resolve(__dirname, '../static'),
   path: path.resolve(__dirname, '../static/dist'),
   js: path.resolve(__dirname, '../static/dist/js'),
   css: path.resolve(__dirname, '../static/dist/css'),
@@ -32,16 +33,16 @@ var dist = {
   pkg: path.resolve(__dirname, '../'),
 }
 
-var release = {
+const release = {
   path: path.resolve(__dirname, '../release'),
-	asset: path.resolve(__dirname, '../release/static')
+  asset: path.resolve(__dirname, '../release/static'),
 }
 
-var config = {
-  src: src,
-	build: build,
-  dist: dist,
-	release: release,
+const config = {
+  src,
+  build,
+  dist,
+  release,
 }
 
 module.exports = config
